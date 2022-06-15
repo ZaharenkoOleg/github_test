@@ -7,7 +7,6 @@ public class BaseTest {
     @BeforeAll
     public static void openMainPage() {
         Configuration.browserSize = "1920x1080";
-        open("https://github.com/selenide/selenide");
         Configuration.holdBrowserOpen = true;
     }
 }

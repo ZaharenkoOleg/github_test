@@ -8,9 +8,10 @@ public class DragAndDrop {
     @Test
     public void FirstDrAndDropTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
-        $("#column-a").dragAndDropTo("column-b");
+        $("#column-a").dragAndDropTo($("#column-b"));
         //actions().clickAndHold($("#column-a")).moveToElement($("#column-b")).perform();
 
+        $("#column-b").shouldHave(text("A"));
         $("#column-a").shouldHave(text("B"));
     }
 }
